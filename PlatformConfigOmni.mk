@@ -15,6 +15,7 @@
 include device/sony/kitakami-common/PlatformConfig.mk
 
 #MultiROM config. MultiROM also uses parts of TWRP config
+MR_DEV_BLOCK_BOOTDEVICE := true
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := device/sony/kitakami-common/multirom/init_devices.c
 MR_USE_QCOM_OVERLAY := true
