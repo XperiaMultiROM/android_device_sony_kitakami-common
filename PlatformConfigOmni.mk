@@ -17,11 +17,13 @@ include device/sony/kitakami-common/PlatformConfig.mk
 #MultiROM config. MultiROM also uses parts of TWRP config
 MR_DEV_BLOCK_BOOTDEVICE := true
 MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := device/sony/kitakami-common/multirom/init_devices.c
+MR_INIT_DEVICES := device/sony/kitakami-common/multirom/mr_init_devices.c
 MR_USE_QCOM_OVERLAY := true
-MR_QCOM_OVERLAY_HEADER := device/sony/kitakami-common/multirom/framebuffer_qcom_overlay.h
-MR_KEXEC_DTB := true
+MR_QCOM_OVERLAY_HEADER := device/sony/kitakami-common/multirom/mr_qcom_overlay.h
 MR_FSTAB := device/sony/kitakami-common/rootdir/twrp.fstab
+MR_KEXEC_MEM_MIN := 0x0
+MR_DEVICE_HOOKS := device/sony/kitakami-common/multirom/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 5
 MR_USE_MROM_FSTAB := true
 MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 MR_PIXEL_FORMAT := "RGBX_8888"
