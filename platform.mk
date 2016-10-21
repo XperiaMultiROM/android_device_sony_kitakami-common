@@ -56,7 +56,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
 DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/kitakami/overlay
+    device/sony/kitakami-common/overlay
 
 # Platform Init
 PRODUCT_PACKAGES += \
@@ -91,6 +91,12 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     keystore.msm8994
+
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    brcm-uim-sysfs \
+    libfmjni
 
 # RILD
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -136,3 +142,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.tilt_detector=false \
     ro.qti.sensors.dpc=false \
     ro.qti.sensors.wu=true
+
+## 8MP Switch for ES
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.8mp.config=true
